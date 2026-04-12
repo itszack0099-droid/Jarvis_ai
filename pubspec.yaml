@@ -1,0 +1,20 @@
+name: jarvis
+description: Offline AI Assistant
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  permission_handler: ^11.0.1
+  speech_to_text: ^6.6.0
+  flutter_tts: ^3.8.5
+
+flutter:
+  uses-material-design: true
