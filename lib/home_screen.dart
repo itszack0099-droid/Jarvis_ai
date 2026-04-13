@@ -3,6 +3,10 @@ import 'package:flutter/material.dart';
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
+  void startAssistant() {
+    print("Assistant started");
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -11,9 +15,7 @@ class HomeScreen extends StatelessWidget {
       ),
       body: Center(
         child: ElevatedButton(
-          onPressed: () {
-            print("Assistant Start");
-          },
+          onPressed: startAssistant,
           child: const Text("Start Assistant"),
         ),
       ),
