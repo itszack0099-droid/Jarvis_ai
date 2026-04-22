@@ -1,45 +1,57 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.app">
+<manifest
+xmlns:android=
+"http://schemas.android.com/apk/res/android"
+package="com.zackify.notifier">
 
-    <!-- Internet permission (required for API, AI, network) -->
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission
+        android:name=
+        "android.permission.INTERNET"/>
 
-    <!-- Optional but commonly needed -->
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission
+        android:name=
+        "android.permission.POST_NOTIFICATIONS"/>
+
+    <uses-permission
+        android:name=
+        "android.permission.VIBRATE"/>
 
     <application
-        android:label="Top Solution"
-        android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher"
-        android:usesCleartextTraffic="true">
+        android:allowBackup="true"
+        android:label="Zackify Notifier"
+        android:supportsRtl="true">
 
-        <!-- Main Flutter Activity -->
         <activity
             android:name=".MainActivity"
-            android:exported="true"
-            android:launchMode="singleTop"
-            android:theme="@style/LaunchTheme"
-            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|layoutDirection|fontScale|screenLayout|density|uiMode"
-            android:hardwareAccelerated="true"
-            android:windowSoftInputMode="adjustResize">
+            android:exported="true">
 
-            <!-- Splash / Launcher -->
-            <meta-data
-                android:name="io.flutter.embedding.android.NormalTheme"
-                android:resource="@style/NormalTheme" />
-
-            <!-- Launch intent -->
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+
+                <action
+                android:name=
+                "android.intent.action.MAIN"/>
+
+                <category
+                android:name=
+                "android.intent.category.LAUNCHER"/>
+
             </intent-filter>
 
         </activity>
 
-        <!-- Flutter embedding version -->
-        <meta-data
-            android:name="flutterEmbedding"
-            android:value="2" />
+        <service
+            android:name=
+            ".MyFirebaseService"
+            android:exported="false">
+
+            <intent-filter>
+
+                <action
+                android:name=
+                "com.google.firebase.MESSAGING_EVENT"/>
+
+            </intent-filter>
+
+        </service>
 
     </application>
 
