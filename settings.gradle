@@ -25,7 +25,6 @@ dependencyResolutionManagement {
 
 }
 
-rootProject.name =
-"ZackifyNotifier"
+rootProject.name = "ZackifyNotifier"
 
 include(":app")
