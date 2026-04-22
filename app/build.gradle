@@ -1,47 +1,35 @@
 plugins {
-
     id 'com.android.application'
-
     id 'com.google.gms.google-services'
-
 }
 
 android {
 
-    namespace "com.zackify.notifier"
+    namespace "com.zackify.admin"
 
     compileSdk 34
 
     defaultConfig {
 
-        applicationId "com.zackify.notifier"
+        applicationId "com.zackify.admin"
 
         minSdk 24
-
         targetSdk 34
 
         versionCode 1
-
         versionName "1.0"
 
     }
 
     buildTypes {
-
         release {
-
             minifyEnabled false
-
         }
-
     }
 
     compileOptions {
-
         sourceCompatibility JavaVersion.VERSION_17
-
         targetCompatibility JavaVersion.VERSION_17
-
     }
 
 }
