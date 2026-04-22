@@ -1,24 +1,14 @@
-<manifest
-xmlns:android=
-"http://schemas.android.com/apk/res/android"
-package="com.zackify.notifier">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.zackify.admin">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <uses-permission
-        android:name=
-        "android.permission.INTERNET"/>
-
-    <uses-permission
-        android:name=
-        "android.permission.POST_NOTIFICATIONS"/>
-
-    <uses-permission
-        android:name=
-        "android.permission.VIBRATE"/>
+        android:name="android.permission.POST_NOTIFICATIONS"/>
 
     <application
         android:allowBackup="true"
-        android:label="Zackify Notifier"
-        android:supportsRtl="true">
+        android:label="Zackify Admin">
 
         <activity
             android:name=".MainActivity"
@@ -27,27 +17,23 @@ package="com.zackify.notifier">
             <intent-filter>
 
                 <action
-                android:name=
-                "android.intent.action.MAIN"/>
+                    android:name="android.intent.action.MAIN"/>
 
                 <category
-                android:name=
-                "android.intent.category.LAUNCHER"/>
+                    android:name="android.intent.category.LAUNCHER"/>
 
             </intent-filter>
 
         </activity>
 
         <service
-            android:name=
-            ".MyFirebaseService"
+            android:name=".MyFirebaseService"
             android:exported="false">
 
             <intent-filter>
 
                 <action
-                android:name=
-                "com.google.firebase.MESSAGING_EVENT"/>
+                    android:name="com.google.firebase.MESSAGING_EVENT"/>
 
             </intent-filter>
 
