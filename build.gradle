@@ -1,31 +1,7 @@
-buildscript {
+plugins {
 
-    repositories {
+    id "com.android.application" version "8.2.2" apply false
 
-        google()
-        mavenCentral()
-
-    }
-
-    dependencies {
-
-        classpath
-        "com.android.tools.build:gradle:8.2.2"
-
-        classpath
-        "com.google.gms:google-services:4.4.1"
-
-    }
-
-}
-
-allprojects {
-
-    repositories {
-
-        google()
-        mavenCentral()
-
-    }
+    id "com.google.gms.google-services" version "4.4.1" apply false
 
 }
