@@ -1,4 +1,4 @@
-package com.zackify.notifier
+package com.zackify.admin
 
 import android.Manifest
 import android.os.Build
